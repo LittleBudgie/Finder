@@ -10,7 +10,8 @@ public class SpellCheck {
         String find = scan.nextLine();
         System.out.println("Checking...");
         if (sentences.indexOf(find) != -1) {
-            System.out.println("Sorry, you do have " + find + " in your sentence(s).");
+            int start = sentences.indexOf(find);
+            System.out.println("Sorry, you do have " + find + " in your sentence(s). The first occurrence of it starts at index " + start + " and ends at index " + (start + find.length() - 1));
         }
         else {
             System.out.println("Great job! We didn't catch a single " + find + " in your sentence!");
